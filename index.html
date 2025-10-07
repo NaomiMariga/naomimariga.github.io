@@ -1,23 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Naomi Mariga - Data Analyst and Data Scientist from Nairobi, Kenya. Portfolio and GitHub projects.">
-  <title>Naomi Mariga | Data Science Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naomi Mariga | Data Analyst & Data Scientist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #007acc;
+      --text: #333;
+      --bg: #f8f9fa;
+      --white: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 0 1rem;
+    }
+
+    header {
+      background: var(--white);
+      padding: 2rem 1rem;
+      text-align: center;
+      border-bottom: 2px solid #e5e5e5;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-top: 0.5rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      color: var(--primary);
+      border-left: 4px solid var(--primary);
+      padding-left: 10px;
+      margin-bottom: 1rem;
+    }
+
+    section + section {
+      margin-top: 2rem;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ul li::before {
+      content: "•";
+      color: var(--primary);
+      margin-right: 0.5rem;
+    }
+
+    .links a {
+      display: inline-block;
+      margin-right: 1rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      padding: 2rem 0;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hi, I'm Naomi Mariga 👋</h1>
-  <p>Data Analyst | Data Scientist | Developer</p>
+  <header>
+    <h1>Naomi Mariga</h1>
+    <p>Data Analyst | Data Scientist | Python | Power BI | SQL</p>
+  </header>
 
-  <p>I specialize in Python, Power BI, and Data Science projects. 
-     I’ve worked on healthcare data, fraud analysis, and machine learning tasks.</p>
+  <div class="container">
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I'm Naomi Mariga from Nairobi, Kenya — passionate about data analysis, visualization, and using data-driven insights to improve decision-making. 
+        I have experience in data annotation, cleaning, and building machine learning models in Python.
+      </p>
+    </section>
 
-  <h3>My GitHub Projects</h3>
-  <ul>
-    <li><a href="https://github.com/NaomiMariga/LGMVIP-DataScience-Task-1">LGMVIP Data Science Task 1</a></li>
-  </ul>
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li>Python (Pandas, NumPy, Scikit-learn)</li>
+        <li>Data Visualization (Power BI, Matplotlib, Seaborn)</li>
+        <li>SQL & Excel</li>
+        <li>Machine Learning & Model Evaluation</li>
+      </ul>
+    </section>
 
-  <p>Connect with me: <a href="mailto:kaburamariga@gmail.com">kaburamariga@gmail.com</a></p>
+    <section>
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:kaburamariga@gmail.com">kaburamariga@gmail.com</a></p>
+      <p>Location: Nairobi, Kenya</p>
+      <div class="links">
+        <a href="https://github.com/NaomiMariga" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/naomimariga" target="_blank">LinkedIn</a>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Naomi Mariga. All Rights Reserved.
+  </footer>
 </body>
 </html>
