@@ -4,138 +4,185 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Naomi Mariga | Data Analyst & Data Scientist</title>
+
+  <!-- GOOGLE VERIFICATION META TAG -->
+  <meta name="google-site-verification" content="X2-tyNVtI7HM7OLU5HTSJb8VSGOM8Lv5K5XTbmWE5vE" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <meta name="description" content="Naomi Mariga — Data Analyst and Data Scientist based in Nairobi, Kenya. Portfolio and contact." />
+
   <style>
-    :root {
+    :root{
       --primary: #007acc;
-      --text: #333;
       --bg: #f8f9fa;
-      --white: #fff;
+      --card: #ffffff;
+      --text: #222;
+      --muted: #666;
+      --radius: 12px;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
+    /* Dark theme variables */
+    @media (prefers-color-scheme: dark) {
+      :root{
+        --primary: #66aaff;
+        --bg: #0b1220;
+        --card: #071021;
+        --text: #e6eef9;
+        --muted: #9fb0cc;
+      }
     }
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      padding: 0 1rem;
+    *{box-sizing:border-box;margin:0;padding:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+
+    html,body{height:100%}
+    body{
+      background:linear-gradient(180deg, var(--bg), rgba(0,0,0,0.02));
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+      padding:24px;
     }
 
-    header {
-      background: var(--white);
-      padding: 2rem 1rem;
-      text-align: center;
-      border-bottom: 2px solid #e5e5e5;
+    .wrap{
+      max-width:980px;
+      margin:28px auto;
+      padding:28px;
     }
 
-    header h1 {
-      font-size: 2rem;
-      color: var(--primary);
-      font-weight: 700;
+    header{
+      display:flex;
+      gap:20px;
+      align-items:center;
+      background:var(--card);
+      padding:28px;
+      border-radius:var(--radius);
+      box-shadow:0 6px 18px rgba(2,6,23,0.06);
+      border:1px solid rgba(0,0,0,0.04);
     }
 
-    header p {
-      font-size: 1.1rem;
-      color: #555;
-      margin-top: 0.5rem;
+    .avatar{
+      width:84px;height:84px;border-radius:14px;flex:0 0 84px;
+      background-image: url('https://avatars.githubusercontent.com/u/'); /* optional */
+      background-size:cover;background-position:center;
+      display:flex;align-items:center;justify-content:center;
+      font-weight:700;color:var(--primary);font-size:28px;
     }
 
-    .container {
-      max-width: 900px;
-      margin: 2rem auto;
-      background: var(--white);
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    header .meta h1{font-size:1.6rem;margin-bottom:6px;color:var(--primary)}
+    header .meta p{color:var(--muted)}
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:20px;
+      margin-top:20px;
     }
 
-    h2 {
-      color: var(--primary);
-      border-left: 4px solid var(--primary);
-      padding-left: 10px;
-      margin-bottom: 1rem;
+    /* main card */
+    .card{
+      background:var(--card);
+      padding:22px;
+      border-radius:12px;
+      box-shadow:0 6px 18px rgba(2,6,23,0.04);
+      border:1px solid rgba(0,0,0,0.04);
     }
 
-    section + section {
-      margin-top: 2rem;
+    h2{
+      color:var(--primary);
+      margin-bottom:10px;
+      font-size:1.05rem;
     }
 
-    ul {
-      list-style: none;
+    p{color:var(--text); margin-bottom:12px;}
+
+    ul.skills{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0}
+    ul.skills li{background:rgba(0,0,0,0.04);padding:8px 10px;border-radius:8px;font-weight:600;color:var(--muted);}
+    @media (prefers-color-scheme: dark){
+      ul.skills li{background: rgba(255,255,255,0.03); color:var(--muted);}
     }
 
-    ul li::before {
-      content: "•";
-      color: var(--primary);
-      margin-right: 0.5rem;
+    .contact a{color:var(--primary);text-decoration:none;font-weight:600}
+    .contact a:hover{text-decoration:underline}
+
+    /* sidebar */
+    aside.sidebar{display:flex;flex-direction:column;gap:12px}
+    .small{
+      font-size:0.95rem;color:var(--muted);
+      background: linear-gradient(180deg, rgba(0,0,0,0.015), transparent);
+      padding:14px;border-radius:10px;
+      border:1px solid rgba(0,0,0,0.03);
     }
 
-    .links a {
-      display: inline-block;
-      margin-right: 1rem;
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 600;
+    .links a{
+      display:inline-block;margin-right:10px;margin-top:6px;color:var(--primary);text-decoration:none;font-weight:600;
     }
 
-    .links a:hover {
-      text-decoration: underline;
+    footer{
+      text-align:center;margin-top:28px;color:var(--muted);font-size:0.9rem;
     }
 
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #666;
-      padding: 2rem 0;
+    /* responsive */
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr; }
+      header{flex-direction:column;align-items:flex-start;gap:14px}
+      .avatar{width:64px;height:64px;border-radius:10px}
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Naomi Mariga</h1>
-    <p>Data Analyst | Data Scientist | Python | Power BI | SQL</p>
-  </header>
-
-  <div class="container">
-    <section>
-      <h2>About Me</h2>
-      <p>
-        I'm Naomi Mariga from Nairobi, Kenya — passionate about data analysis, visualization, and using data-driven insights to improve decision-making. 
-        I have experience in data annotation, cleaning, and building machine learning models in Python.
-      </p>
-    </section>
-
-    <section>
-      <h2>Skills</h2>
-      <ul>
-        <li>Python (Pandas, NumPy, Scikit-learn)</li>
-        <li>Data Visualization (Power BI, Matplotlib, Seaborn)</li>
-        <li>SQL & Excel</li>
-        <li>Machine Learning & Model Evaluation</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:kaburamariga@gmail.com">kaburamariga@gmail.com</a></p>
-      <p>Location: Nairobi, Kenya</p>
-      <div class="links">
-        <a href="https://github.com/NaomiMariga" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/naomimariga" target="_blank">LinkedIn</a>
+  <div class="wrap">
+    <header>
+      <div class="avatar" aria-hidden="true">NM</div>
+      <div class="meta">
+        <h1>Naomi Mariga</h1>
+        <p>Data Analyst • Data Scientist — Python · Power BI · SQL</p>
       </div>
-    </section>
-  </div>
+    </header>
 
-  <footer>
-    &copy; 2025 Naomi Mariga. All Rights Reserved.
-  </footer>
+    <div class="grid">
+      <main class="card">
+        <section>
+          <h2>About Me</h2>
+          <p>I'm Naomi from Nairobi, Kenya. I specialize in data cleaning, analysis and visualization, and building practical ML models to support decision-making. I have experience working with healthcare claims and fraud analysis.</p>
+        </section>
+
+        <section style="margin-top:18px;">
+          <h2>Highlights</h2>
+          <ul style="margin-left:0; padding-left:0; list-style:none;">
+            <li style="margin-bottom:8px;">• Experience in data annotation and processing at scale</li>
+            <li style="margin-bottom:8px;">• Built EDA and ML prototypes using Python (Pandas, scikit-learn)</li>
+            <li style="margin-bottom:8px;">• Data visualization with Power BI and Matplotlib</li>
+          </ul>
+        </section>
+      </main>
+
+      <aside class="sidebar">
+        <div class="small card">
+          <h2 style="margin-top:0;">Skills</h2>
+          <ul class="skills">
+            <li>Python</li><li>Pandas</li><li>SQL</li><li>Power BI</li><li>ML</li>
+          </ul>
+        </div>
+
+        <div class="small card contact">
+          <h2 style="margin-top:0;">Contact</h2>
+          <p>Email: <a href="mailto:kaburamariga@gmail.com">kaburamariga@gmail.com</a></p>
+          <p>Location: Nairobi, Kenya</p>
+          <div class="links">
+            <a href="https://github.com/NaomiMariga" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://linkedin.com/in/naomimariga" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="card">
+      &copy; 2025 Naomi Mariga · Built with GitHub Pages
+    </footer>
+  </div>
 </body>
 </html>
